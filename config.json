@@ -1,0 +1,22 @@
+{
+  "home": "/Users/Crazz/WorkSpace/GLWork/src/rocket.iosxc.com/navigator/",
+  "server": {
+    "port": 8992,
+    "addr": "0.0.0.0",
+    "charset": "UTF-8"
+  },
+  "database": {
+    "user": "root",
+    "password": "maserati",
+    "host": "127.0.0.1",
+    "port": 3306,
+    "schema": "RKT_CONFIG"
+  },
+  "log": {
+    "filePath": "logs/",
+    "rotateType": "TIME",
+    "rotateValue": "60*60*24",
+    "rotateCount": 7,
+    "level": "debug"
+  }
+}
