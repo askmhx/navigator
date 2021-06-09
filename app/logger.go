@@ -5,10 +5,13 @@ import (
 	"gorm.io/gorm/logger"
 	"log"
 	"os"
+	"path/filepath"
 )
 
 func initLogger(config *AppConfig) *Logger {
-	logPath := fmt.Sprintf("%s%s", config.Home, config.Log.File)
+
+	cPath, _ := filepath.Abs(fmt.Sprintf("%s%s", config.Home, config.Log.FilePath))
+	logPath := fmt.Sprintf("%s%s", cPath, os.Executable())
 	file, err := os.Open(logPath)
 	if err != nil {
 		file, _ = os.Create(logPath)
