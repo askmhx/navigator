@@ -7,7 +7,7 @@
   },
   "database": {
     "user": "root",
-    "password": "maserati",
+    "password": "",
     "host": "127.0.0.1",
     "port": 3306,
     "schema": "RKT_CONFIG"

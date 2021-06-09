@@ -1,33 +1,34 @@
 package service
 
 import (
-	"context"
-	"rocket.iosxc.com/navigator/v1/app"
 	"rocket.iosxc.com/navigator/v1/model"
 	"rocket.iosxc.com/navigator/v1/repository"
 )
 
-type AppConfigService interface {
-	Upload(data model.UploadRequest) model.CommonResult
+type ConfigService interface {
 	Download(data model.DownloadRequest) model.CommonResult
+	RunNotifyTask()
 }
 
-type appConfigService struct {
-	ctx   context.Context
-	appRepository  repository.AppRepository
-	configRepostiry  repository.ConfigRepository
+type configService struct {
+	appRepository   repository.AppRepository
+	configRepostiry repository.ConfigRepository
 }
 
-func (this appConfigService) Download(data model.UploadRequest) model.CommonResult {
+func (this configService) RunNotifyTask() {
+	panic("implement me")
+}
 
-	attach := model.MerchantAttach{
-		MerchantId: data.MerchantId,
-		AttachName: data.FileName,
-		AttachType: "FILE",
-		AttachPath: data.FileName,
-		CreatedBy:  "system",
-	}
-	this.appRepository.Save(attach)
+func (this configService) Download(data model.DownloadRequest) model.CommonResult {
+
+	//attach := model.MerchantAttach{
+	//	MerchantId: data.MerchantId,
+	//	AttachName: data.FileName,
+	//	AttachType: "FILE",
+	//	AttachPath: data.FileName,
+	//	CreatedBy:  "system",
+	//}
+	//this.appRepository.Save(attach)
 
 	ret := model.CommonResult{
 		Code:    model.RESULT_CODE_SUCCESS,
@@ -37,9 +38,9 @@ func (this appConfigService) Download(data model.UploadRequest) model.CommonResu
 	return ret
 }
 
-func NewFileService(repo repository.MerchantAttachRepository, cache app.CacheManager) AppConfigService {
-	return &fileService{
-		repo:  repo,
-		cache: cache,
+func NewConfigService(appRepository repository.AppRepository, configRepostiry repository.ConfigRepository) ConfigService {
+	return &configService{
+		appRepository:   appRepository,
+		configRepostiry: configRepostiry,
 	}
 }

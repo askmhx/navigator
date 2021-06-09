@@ -30,4 +30,5 @@ Go版配置中心，基于HTTP
 
 > Config = Base64(AES(Plain_Config,AppKey))
 
-> Sign = SHA512（AppID|Cluster|Profile|Config|NotifyURL|UpdateTime|UpdateBy|AppKey）
+> Sign = SHA512（AppID|Cluster|Profile|Config|NotifyURL|UpdateT
+> ime|UpdateBy|AppKey）
