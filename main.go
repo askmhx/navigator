@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"flag"
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"rocket.iosxc.com/navigator/v1/app"
@@ -18,15 +19,12 @@ var (
 
 func main() {
 	fmt.Println(fmt.Sprintf(AppBanner, AppVersion, AppDate, GoVersion))
-	//var cfgPath string
-	//flag.StringVar(&cfgPath, "cfg", "NOT SET", "app cfg path")
-	//flag.Parse()
-	//
-	//if cfgPath == "NOT SET" {
-	//	cfgPath = "./config.json"
-	//}
-
-	var cfgPath = "./config.json"
+	var cfgPath string
+	flag.StringVar(&cfgPath, "cfg", "NOT SET", "app cfg path")
+	flag.Parse()
+	if cfgPath == "NOT SET" {
+		cfgPath = "./config.json"
+	}
 	config := app.InitConfig(cfgPath)
 	gin := gin.Default()
 	app.Launch(context.Background(), config, gin)
