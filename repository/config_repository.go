@@ -6,7 +6,7 @@ import (
 )
 
 type ConfigRepository interface {
-	Query(appId string, cluster string, profile string) model.AppConfig
+	Query(cid string) model.AppConfig
 	QueryAll() []model.AppConfig
 }
 
@@ -14,9 +14,9 @@ type configRepositoryImpl struct {
 	db *gorm.DB
 }
 
-func (this configRepositoryImpl) Query(appId string, cluster string, profile string) model.AppConfig {
+func (this configRepositoryImpl) Query(cid string) model.AppConfig {
 	var ret model.AppConfig
-	this.db.Where(model.AppConfig{AppId: appId, Cluster: cluster, Profile: profile}).First(&ret)
+	this.db.Where(model.AppConfig{Cid: cid}).First(&ret)
 	return ret
 }
 
