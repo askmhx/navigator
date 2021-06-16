@@ -80,3 +80,5 @@
 |4|Sign|签名||
 
 > Sign = SHA512（SORTED_PLAIN_STRING|AppKey）
+
+> 如无返回则不再通知 ，下次AppServer主动请求配置如带NotityURL则会继续通知
