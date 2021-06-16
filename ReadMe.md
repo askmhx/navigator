@@ -26,7 +26,6 @@
 |1|AppId|应用Id||
 |2|Cluster|集群||
 |3|Profile|配置||
-|4|NotifyUrl|通知Url|通知新配置|
 |5|Sign|签名||
 
 > Sign = SHA512（SORTED_PLAIN_STRING|AppKey）

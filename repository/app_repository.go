@@ -6,29 +6,26 @@ import (
 )
 
 type AppRepository interface {
-	Create(account *model.ChannelLog) bool
-	Update(account *model.ChannelLog) bool
-	Query(issNo string, accountNo string) model.ChannelLog
+	Query(appId string) model.AppInf
+	QueryAll() []model.AppInf
 }
 
-type appRepository struct {
+type appRepositoryImpl struct {
 	db *gorm.DB
 }
 
+func (this appRepositoryImpl) Query(appId string) model.AppInf {
+	var ret model.AppInf
+	this.db.Where(model.AppInf{AppId: appId}).First(&ret)
+	return ret
+}
+
+func (this appRepositoryImpl) QueryAll() []model.AppInf {
+	var rets []model.AppInf
+	this.db.Find(&rets)
+	return rets
+}
+
 func NewAppRepository(db *gorm.DB) AppRepository {
-	return &appRepository{db: db}
-}
-
-func (this appRepository) Create(account *model.ChannelLog) bool {
-	return this.db.Create(account).RowsAffected == 1
-}
-
-func (this appRepository) Update(account *model.ChannelLog) bool {
-	return this.db.Save(account).RowsAffected == 1
-}
-
-func (this appRepository) Query(issNo string, accountNo string) model.ChannelLog {
-	var account model.ChannelLog
-	//this.db.Where(model.ChannelLog{InstitutionNo: issNo, AccountNo: accountNo}).First(&account)
-	return account
+	return &appRepositoryImpl{db: db}
 }

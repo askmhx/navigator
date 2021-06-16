@@ -1,14 +1,20 @@
 package service
 
 import (
+	"fmt"
+	"reflect"
 	"rocket.iosxc.com/navigator/v1/model"
 	"rocket.iosxc.com/navigator/v1/repository"
+	"time"
 )
 
 type ConfigService interface {
-	Download(data model.DownloadRequest) model.CommonResult
+	Download(data model.ConfigRequest) model.CommonResult
 	RunNotifyTask()
 }
+
+var configMap = new(map[string]model.AppConfig)
+var appMap = new(map[string]model.AppProfile)
 
 type configService struct {
 	appRepository   repository.AppRepository
@@ -16,10 +22,26 @@ type configService struct {
 }
 
 func (this configService) RunNotifyTask() {
-	panic("implement me")
+	ticker := time.NewTicker(time.Millisecond * 500)
+	for t := range ticker.C {
+		fmt.Printf("Timer Start AT:%s\n", t)
+		for _, m := range this.configRepostiry.QueryAll() {
+			oldConfig := configMap[m.AppId]
+			if oldConfig != nil&!reflect.DeepEqual(oldConfig, m) {
+				fmt.Printf("Find New Config For:%s Cluster:%s Profile:%s Version:%s\n", m.AppId, m.Cluster, m.Profile, m.Version)
+				notify()
+			} else {
+				configMap[m.AppId] = oldConfig
+			}
+		}
+	}
 }
 
-func (this configService) Download(data model.DownloadRequest) model.CommonResult {
+func notify() {
+
+}
+
+func (this configService) Download(data model.ConfigRequest) model.CommonResult {
 
 	//attach := model.MerchantAttach{
 	//	MerchantId: data.MerchantId,
