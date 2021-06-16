@@ -1,5 +1,7 @@
 # Go版配置中心，基于HTTP
 
+### 造轮子同样让人愉悦
+
 说明：
 > SORTED_PLAIN_STRING是指参数名（不含sign本身）sort之后取其值，用竖线拼接成的字符串。
 >
