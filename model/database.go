@@ -3,11 +3,8 @@ package model
 import "time"
 
 type AppConfig struct {
-	AppId     string
-	Cluster   string
-	Profile   string
+	Cid       string
 	Config    string
-	Version   string
 	Status    int
 	Memo      string
 	CreatedAt time.Time
@@ -27,4 +24,17 @@ type AppInf struct {
 	CreatedBy  string
 	UpdatedAt  time.Time
 	UpdatedBy  string
+}
+type AppProfile struct {
+	AppId     string
+	Cluster   string
+	Profile   string
+	NotifyUrl string
+	Cid       string
+	Status    int
+	Memo      string
+	CreatedAt time.Time
+	CreatedBy string
+	UpdatedAt time.Time
+	UpdatedBy string
 }
