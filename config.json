@@ -7,10 +7,10 @@
   },
   "database": {
     "user": "root",
-    "password": "",
+    "password": "easypwd@2021",
     "host": "127.0.0.1",
     "port": 3306,
-    "schema": "RKT_CONFIG"
+    "schema": "NAVIGATOR"
   },
   "log": {
     "filePath": "logs/",
