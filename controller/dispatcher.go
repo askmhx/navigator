@@ -16,14 +16,13 @@ func NewDispatcherCtrl(service service.ConfigService) DispatcherCtrl {
 	return DispatcherCtrl{ConfigService: service}
 }
 
-
 func (this *DispatcherCtrl) Download(context *gin.Context) {
 	var requestData model.ConfigRequest
 	err := context.ShouldBind(&requestData)
 	if err != nil {
 		fmt.Println("error happened:", err)
 	}
-	result := this.ConfigService.Download(requestData)
+	result, err := this.ConfigService.Download(requestData)
 	this.response(result.Data, context)
 }
 

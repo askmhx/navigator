@@ -41,8 +41,8 @@
 |2|Cluster|集群||
 |3|Profile|配置||
 |4|Config|新配置|AES/CBC加密|
-|5|UpdateTime|更新时间||
-|6|UpdateBy|更新人||
+|5|CreateAt|更新时间||
+|6|CreateBy|更新人||
 |7|Sign|签名||
 
 > AES = AES/CBC/PKCPS7Padding
@@ -65,8 +65,8 @@
 |2|Cluster|集群||
 |3|Profile|配置||
 |4|Config|新配置|AES/CBC加密|
-|5|UpdateTime|更新时间||
-|6|UpdateBy|更新人||
+|5|CreateAt|更新时间||
+|6|CreateBy|更新人||
 |7|Sign|签名||
 
 > 签名及加密方式同AppServer获取配置时返回参数

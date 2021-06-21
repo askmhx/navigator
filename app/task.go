@@ -38,14 +38,14 @@ func (this *taskManager) notify(m model.AppEnabledConfig) {
 	if !util.IsValidUrl(m.NotifyUrl) {
 		fmt.Printf("URL ERROR For:%s Cluster:%s Profile:%s CreatedAt:%s\n", m.AppId, m.Cluster, m.Profile, m.CreatedAt)
 	}
-	datas := map[string] string{}
-	datas["AppId"]= m.AppId
-	datas["Cluster"]= m.Cluster
-	datas["Profile"]= m.Profile
-	datas["Config"]= util.AESEncrypt(m.Config,m.AppKey)
-	datas["UpdateTime"]= m.CreatedAt.Format("yyyyMMddHHmmss")
-	datas["UpdateBy"]= m.CreatedBy
-	util.HttpPost(m.NotifyUrl,datas,m.AppKey)
+	datas := map[string]string{}
+	datas["AppId"] = m.AppId
+	datas["Cluster"] = m.Cluster
+	datas["Profile"] = m.Profile
+	datas["Config"] = util.AESEncrypt(m.Config, m.AppKey)
+	datas["UpdateTime"] = m.CreatedAt.Format(util.DATE_FORMAT_YMDHMS)
+	datas["UpdateBy"] = m.CreatedBy
+	util.HttpPost(m.NotifyUrl, datas, m.AppKey)
 }
 
 func (this *taskManager) runTask() {
