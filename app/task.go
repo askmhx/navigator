@@ -43,13 +43,16 @@ func (this *taskManager) notify(m model.AppEnabledConfig) {
 	datas["Cluster"] = m.Cluster
 	datas["Profile"] = m.Profile
 	datas["Config"] = util.AESEncrypt(m.Config, m.AppKey)
-	datas["UpdateTime"] = m.CreatedAt.Format(util.DATE_FORMAT_YMDHMS)
-	datas["UpdateBy"] = m.CreatedBy
+	datas["CreateAt"] = m.CreatedAt.Format(util.DATE_FORMAT_YMDHMS)
+	datas["CreateBy"] = m.CreatedBy
 	util.HttpPost(m.NotifyUrl, datas, m.AppKey)
 }
 
-func (this *taskManager) runTask() {
-	ticker := time.NewTicker(time.Millisecond * 500)
+func (this *taskManager) runTask(period int) {
+	if period <= 0 {
+		return
+	}
+	ticker := time.NewTicker(time.Second * time.Duration(period))
 	for t := range ticker.C {
 		fmt.Printf("Timer Start AT:%s\n", t)
 		for _, m := range this.service.QueryAll() {

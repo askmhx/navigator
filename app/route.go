@@ -11,9 +11,8 @@ import (
 const URL_API_DOWNLOAD = "/config"
 
 func initRoute(config *AppConfig, dbServer *gorm.DB, router *gin.Engine) {
-	appRepository := repository.NewAppRepository(dbServer)
 	configRepositry := repository.NewConfigRepository(dbServer)
-	configService := service.NewConfigService(appRepository, configRepositry)
+	configService := service.NewConfigService(configRepositry)
 	dispatcherCtrl := controller.NewDispatcherCtrl(configService)
 	router.POST(URL_API_DOWNLOAD, dispatcherCtrl.Download)
 	initTaskManager(configService)

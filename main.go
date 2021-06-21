@@ -1,7 +1,6 @@
 package main
 
 import (
-	"context"
 	"flag"
 	"fmt"
 	"github.com/gin-gonic/gin"
@@ -11,7 +10,7 @@ import (
 )
 
 var (
-	AppBanner  = "GateWay On Rocket %s Date: %s Build: %s"
+	AppBanner  = "Navigator By askmhx@gmail.com %s Date: %s Build: %s"
 	AppVersion = "1.0.0"
 	AppDate    = time.Now().Format("2006-01-02 15:04:05")
 	GoVersion  = fmt.Sprintf("%s %s/%s", runtime.Version(), runtime.GOOS, runtime.GOARCH)
@@ -27,5 +26,5 @@ func main() {
 	}
 	config := app.InitConfig(cfgPath)
 	gin := gin.Default()
-	app.Launch(context.Background(), config, gin)
+	app.Launch(config, gin)
 }

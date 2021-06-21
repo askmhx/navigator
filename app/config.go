@@ -32,6 +32,9 @@ type AppConfig struct {
 		RotateCount uint
 		Level       string
 	}
+	Task struct {
+		NotifyDuration int
+	}
 }
 
 var config *AppConfig
@@ -46,5 +49,3 @@ func InitConfig(configPath string) *AppConfig {
 	jsonParser.Decode(&config)
 	return config
 }
-
-

@@ -1,7 +1,6 @@
 package app
 
 import (
-	"context"
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"gorm.io/driver/mysql"
@@ -9,10 +8,10 @@ import (
 	"time"
 )
 
-func Launch(ctx context.Context, config *AppConfig, router *gin.Engine) {
+func Launch(config *AppConfig, router *gin.Engine) {
 	log := initLogger(config)
 	dbServer := initDatabase(config, log)
-	initRoute(config, dbServer,router)
+	initRoute(config, dbServer, router)
 	startService(config, router)
 }
 
@@ -36,5 +35,5 @@ func initDatabase(config *AppConfig, logger *Logger) *gorm.DB {
 
 func startService(config *AppConfig, router *gin.Engine) {
 	router.Run(fmt.Sprintf("%s:%d", config.Server.Addr, config.Server.Port))
-	getTaskManager().runTask()
+	getTaskManager().runTask(config.Task.NotifyDuration)
 }
