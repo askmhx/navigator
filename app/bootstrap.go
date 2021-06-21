@@ -36,4 +36,5 @@ func initDatabase(config *AppConfig, logger *Logger) *gorm.DB {
 
 func startService(config *AppConfig, router *gin.Engine) {
 	router.Run(fmt.Sprintf("%s:%d", config.Server.Addr, config.Server.Port))
+	getTaskManager().runTask()
 }

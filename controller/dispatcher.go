@@ -6,18 +6,16 @@ import (
 	"github.com/gin-gonic/gin"
 	"rocket.iosxc.com/navigator/v1/model"
 	"rocket.iosxc.com/navigator/v1/service"
-	"sync"
 )
 
 type DispatcherCtrl struct {
 	ConfigService service.ConfigService
 }
 
-func NewDispatcherCtrl() DispatcherCtrl {
-	return DispatcherCtrl{}
+func NewDispatcherCtrl(service service.ConfigService) DispatcherCtrl {
+	return DispatcherCtrl{ConfigService: service}
 }
 
-var once sync.Once
 
 func (this *DispatcherCtrl) Download(context *gin.Context) {
 	var requestData model.ConfigRequest
@@ -27,9 +25,6 @@ func (this *DispatcherCtrl) Download(context *gin.Context) {
 	}
 	result := this.ConfigService.Download(requestData)
 	this.response(result.Data, context)
-	once.Do(func() {
-		go this.ConfigService.RunNotifyTask()
-	})
 }
 
 func (this *DispatcherCtrl) response(data interface{}, context *gin.Context) {

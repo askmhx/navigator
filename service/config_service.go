@@ -1,47 +1,31 @@
 package service
 
 import (
-	"fmt"
-	"reflect"
 	"rocket.iosxc.com/navigator/v1/model"
 	"rocket.iosxc.com/navigator/v1/repository"
-	"time"
 )
 
 type ConfigService interface {
 	Download(data model.ConfigRequest) model.CommonResult
-	RunNotifyTask()
+	QueryAll() []model.AppEnabledConfig
 }
 
-var configMap = new(map[string]model.AppConfig)
-var appMap = new(map[string]model.AppEnabledConfig)
+
 
 type configService struct {
 	appRepository   repository.AppRepository
 	configRepostiry repository.ConfigRepository
 }
 
-func (this configService) RunNotifyTask() {
-	ticker := time.NewTicker(time.Millisecond * 500)
-	for t := range ticker.C {
-		fmt.Printf("Timer Start AT:%s\n", t)
-		for _, m := range this.configRepostiry.QueryAll() {
-			oldConfig := configMap[m.AppId]
-			if oldConfig != nil&!reflect.DeepEqual(oldConfig, m) {
-				fmt.Printf("Find New Config For:%s Cluster:%s Profile:%s CreatedAt:%s\n", m.AppId, m.Cluster, m.Profile, m.CreatedAt)
-				notify()
-			} else {
-				configMap[m.AppId] = oldConfig
-			}
-		}
-	}
-}
+func (this *configService) QueryAll() []model.AppEnabledConfig {
 
-func notify() {
+	return this.configRepostiry.QueryAll()
 
 }
 
-func (this configService) Download(data model.ConfigRequest) model.CommonResult {
+
+
+func (this *configService) Download(data model.ConfigRequest) model.CommonResult {
 
 	//attach := model.MerchantAttach{
 	//	MerchantId: data.MerchantId,
@@ -60,7 +44,7 @@ func (this configService) Download(data model.ConfigRequest) model.CommonResult 
 	return ret
 }
 
-func NewConfigService(appRepository repository.AppRepository, configRepostiry repository.ConfigRepository) ConfigService {
+func NewConfigService(appRepository repository.AppRepository, configRepostiry repository.ConfigRepository) *configService {
 	return &configService{
 		appRepository:   appRepository,
 		configRepostiry: configRepostiry,
