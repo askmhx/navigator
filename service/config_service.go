@@ -14,7 +14,7 @@ type ConfigService interface {
 }
 
 var configMap = new(map[string]model.AppConfig)
-var appMap = new(map[string]model.AppProfile)
+var appMap = new(map[string]model.AppEnabledConfig)
 
 type configService struct {
 	appRepository   repository.AppRepository
@@ -28,7 +28,7 @@ func (this configService) RunNotifyTask() {
 		for _, m := range this.configRepostiry.QueryAll() {
 			oldConfig := configMap[m.AppId]
 			if oldConfig != nil&!reflect.DeepEqual(oldConfig, m) {
-				fmt.Printf("Find New Config For:%s Cluster:%s Profile:%s Version:%s\n", m.AppId, m.Cluster, m.Profile, m.Version)
+				fmt.Printf("Find New Config For:%s Cluster:%s Profile:%s CreatedAt:%s\n", m.AppId, m.Cluster, m.Profile, m.CreatedAt)
 				notify()
 			} else {
 				configMap[m.AppId] = oldConfig
