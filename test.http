@@ -1,0 +1,6 @@
+POST http://localhost:8992/config
+Content-Type: application/x-www-form-urlencoded
+
+AppId=ROCKET_GATEWAY&Cluster=TST&Profile=TST&Sign=ZSl-C3-spw_kgmOR-3g8S0NNF0c-JRtmtjaR3_b2X0BOA1au9QRGp4Oev6u9OF_yjVG18ymqpqv0H7MFOLZ47Q==
+
+###
