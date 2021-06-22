@@ -22,7 +22,7 @@ func (this *DispatcherCtrl) Download(context *gin.Context) {
 	if err != nil {
 		fmt.Println("error happened:", err)
 	}
-	result, err := this.ConfigService.Download(requestData)
+	result := this.ConfigService.Download(requestData)
 	this.response(result.Data, context)
 }
 
