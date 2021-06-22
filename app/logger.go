@@ -10,13 +10,14 @@ import (
 
 func initLogger(config *AppConfig) *Logger {
 
-	cPath, _ := filepath.Abs(fmt.Sprintf("%s%s", config.Home, config.Log.FilePath))
+	cPath, _ := filepath.Abs(fmt.Sprintf("%s/%s", config.Home, config.Log.FilePath))
 
-	execName, _ := os.Executable()
+	execNameAbsPath, _ := os.Executable()
 
-	fmt.Println(cPath, execName)
+	fmt.Println(cPath, execNameAbsPath)
+	eFile := filepath.Base(execNameAbsPath)
 
-	logPath := fmt.Sprintf("%s%s", cPath, execName)
+	logPath := fmt.Sprintf("%s/%s.log", cPath, eFile)
 
 	file, err := os.Open(logPath)
 	if err != nil {
