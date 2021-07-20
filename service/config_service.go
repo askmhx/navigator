@@ -36,7 +36,6 @@ func (this *configService) Download(data model.ConfigRequest) model.CommonResult
 	config := util.AESEncrypt(appConfig.Config, appConfig.AppKey)
 	createAt := appConfig.CreatedAt.Format(util.DATE_FORMAT_YMDHMS)
 	dataMap["Config"] = config
-	dataMap["NotifyUrl"] = appConfig.NotifyUrl
 	dataMap["CreateAt"] = createAt
 	dataMap["CreateBy"] = appConfig.CreatedBy
 	sign := util.GetSign(dataMap, appConfig.AppKey)
