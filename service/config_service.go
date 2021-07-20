@@ -25,7 +25,7 @@ func (this *configService) Download(data model.ConfigRequest) model.CommonResult
 	dataMap["AppId"] = data.AppId
 	dataMap["Cluster"] = data.Cluster
 	dataMap["Profile"] = data.Profile
-	if util.GetSign(dataMap, appConfig.AppKey) == data.Sign {
+	if util.GetSign(dataMap, appConfig.AppKey) != data.Sign {
 		ret := model.CommonResult{
 			Code:    model.RESULT_CODE_FAIL,
 			Message: "sign error",
