@@ -25,6 +25,7 @@ func main() {
 		cfgPath = "./config.json"
 	}
 	config := app.InitConfig(cfgPath)
-	gin := gin.Default()
-	app.Launch(config, gin)
+	ginServer := gin.Default()
+	gin.SetMode(config.Server.Mode)
+	app.Launch(config, ginServer)
 }

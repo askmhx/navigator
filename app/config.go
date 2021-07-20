@@ -14,6 +14,7 @@ type AppConfig struct {
 		Port    uint
 		Addr    string
 		CharSet string
+		Mode    string
 	}
 	Database struct {
 		User            string

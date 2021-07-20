@@ -3,7 +3,8 @@
   "server": {
     "port": 8992,
     "addr": "0.0.0.0",
-    "charset": "UTF-8"
+    "charset": "UTF-8",
+    "mode": "release"
   },
   "database": {
     "user": "root",
