@@ -1,0 +1,10 @@
+[Unit]
+Description=NAVIGATOR SERVER
+After=network.target mysqld.service
+
+[Service]
+Type=simple
+ExecStart=/opt/server/navigator/navigator -cfg /opt/server/navigator/config.json
+
+[Install]
+WantedBy=multi-user.target
