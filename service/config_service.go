@@ -21,6 +21,16 @@ func (this *configService) QueryAll() []model.AppEnabledConfig {
 
 func (this *configService) Download(data model.ConfigRequest) model.CommonResult {
 	appConfig := this.configRepostiry.Query(data.AppId, data.Cluster, data.Profile)
+
+	if appConfig.AppId == "" || appConfig.Config == "" {
+		ret := model.CommonResult{
+			Code:    model.RESULT_CODE_FAIL,
+			Message: "no config find",
+			Data:    nil,
+		}
+		return ret
+	}
+
 	dataMap := map[string]string{}
 	dataMap["AppId"] = data.AppId
 	dataMap["Cluster"] = data.Cluster
