@@ -1,0 +1,9 @@
+
+输出命令
+
+GOARCH=amd64 GOOS=linux go build -o resources/navigator ./
+
+
+Goland运行参数
+
+-cfg resources/config.json

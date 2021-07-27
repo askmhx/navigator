@@ -25,7 +25,7 @@ func (this *configService) Download(data model.ConfigRequest) model.CommonResult
 	if appConfig.AppId == "" || appConfig.Config == "" {
 		ret := model.CommonResult{
 			Code:    model.RESULT_CODE_FAIL,
-			Message: "no config find",
+			Message: "no database find",
 			Data:    nil,
 		}
 		return ret

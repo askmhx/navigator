@@ -4,6 +4,7 @@ import (
 	"flag"
 	"fmt"
 	"github.com/gin-gonic/gin"
+	"os"
 	"rocket.iosxc.com/navigator/v1/app"
 	"runtime"
 	"time"
@@ -22,7 +23,8 @@ func main() {
 	flag.StringVar(&cfgPath, "cfg", "NOT SET", "app cfg path")
 	flag.Parse()
 	if cfgPath == "NOT SET" {
-		cfgPath = "./config.json"
+		fmt.Println("CONFIG NOT SET")
+		os.Exit(1)
 	}
 	config := app.InitConfig(cfgPath)
 	ginServer := gin.Default()

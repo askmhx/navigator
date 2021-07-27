@@ -8,7 +8,7 @@ import (
 	"rocket.iosxc.com/navigator/v1/service"
 )
 
-const URL_API_DOWNLOAD = "/config"
+const URL_API_DOWNLOAD = "/database"
 
 func initRoute(config *AppConfig, dbServer *gorm.DB, router *gin.Engine) {
 	configRepositry := repository.NewConfigRepository(dbServer)
