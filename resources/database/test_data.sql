@@ -1,73 +1,73 @@
 
-INSERT INTO NAVIGATOR.T_APP_INF (APP_ID, APP_KEY, APP_NAME, DEPARTMENT, OWNER, STATUS, MEMO, CREATED_AT, CREATED_BY, UPDATED_AT, UPDATED_BY) VALUES ('ROCKET_ACCOUNT', '7E645534A283671BAC066C3C76E14074', 'ACCOUNT', 'BOSS', 'ASKMHX', 1, NULL, '2021-06-16 16:01:18', 'ASKMHX', NULL, NULL);
-INSERT INTO NAVIGATOR.T_APP_INF (APP_ID, APP_KEY, APP_NAME, DEPARTMENT, OWNER, STATUS, MEMO, CREATED_AT, CREATED_BY, UPDATED_AT, UPDATED_BY) VALUES ('ROCKET_CHANNEL', '7E645534A283671BAC066C3C76E14074', 'CHANNEL', 'BOSS', 'ASKMHX', 1, NULL, '2021-06-16 16:01:18', 'ASKMHX', NULL, NULL);
-INSERT INTO NAVIGATOR.T_APP_INF (APP_ID, APP_KEY, APP_NAME, DEPARTMENT, OWNER, STATUS, MEMO, CREATED_AT, CREATED_BY, UPDATED_AT, UPDATED_BY) VALUES ('ROCKET_CMS', '7E645534A283671BAC066C3C76E14074', 'CMS', 'BOSS', 'ASKMHX', 1, NULL, '2021-06-16 16:01:18', 'ASKMHX', NULL, NULL);
-INSERT INTO NAVIGATOR.T_APP_INF (APP_ID, APP_KEY, APP_NAME, DEPARTMENT, OWNER, STATUS, MEMO, CREATED_AT, CREATED_BY, UPDATED_AT, UPDATED_BY) VALUES ('ROCKET_GATEWAY', '7E645534A283671BAC066C3C76E14074', 'GATEWAY', 'BOSS', 'ASKMHX', 1, NULL, '2021-06-16 16:01:18', 'ASKMHX', NULL, NULL);
-INSERT INTO NAVIGATOR.T_APP_INF (APP_ID, APP_KEY, APP_NAME, DEPARTMENT, OWNER, STATUS, MEMO, CREATED_AT, CREATED_BY, UPDATED_AT, UPDATED_BY) VALUES ('ROCKET_HOMEWORK', '7E645534A283671BAC066C3C76E14074', 'HOMEWORK', 'BOSS', 'ASKMHX', 1, NULL, '2021-06-16 16:01:18', 'ASKMHX', NULL, NULL);
-INSERT INTO NAVIGATOR.T_APP_INF (APP_ID, APP_KEY, APP_NAME, DEPARTMENT, OWNER, STATUS, MEMO, CREATED_AT, CREATED_BY, UPDATED_AT, UPDATED_BY) VALUES ('ROCKET_MERCHANT', '7E645534A283671BAC066C3C76E14074', 'MERCHANT', 'BOSS', 'ASKMHX', 1, NULL, '2021-06-16 16:01:18', 'ASKMHX', NULL, NULL);
-INSERT INTO NAVIGATOR.T_APP_INF (APP_ID, APP_KEY, APP_NAME, DEPARTMENT, OWNER, STATUS, MEMO, CREATED_AT, CREATED_BY, UPDATED_AT, UPDATED_BY) VALUES ('ROCKET_OMS', '7E645534A283671BAC066C3C76E14074', 'OMS', 'BOSS', 'ASKMHX', 1, NULL, '2021-06-16 16:01:18', 'ASKMHX', NULL, NULL);
+insert into navigator.t_app_inf (app_id, app_key, app_name, department, owner, status, memo, created_at, created_by, updated_at, updated_by) values ('ROCKET_ACCOUNT', '7e645534a283671bac066c3c76e14074', 'ACCOUNT', 'boss', 'askmhx', 1, null, '2021-06-16 16:01:18', 'askmhx', null, null);
+insert into navigator.t_app_inf (app_id, app_key, app_name, department, owner, status, memo, created_at, created_by, updated_at, updated_by) values ('ROCKET_CHANNEL', '7e645534a283671bac066c3c76e14074', 'CHANNEL', 'boss', 'askmhx', 1, null, '2021-06-16 16:01:18', 'askmhx', null, null);
+insert into navigator.t_app_inf (app_id, app_key, app_name, department, owner, status, memo, created_at, created_by, updated_at, updated_by) values ('ROCKET_CMS', '7e645534a283671bac066c3c76e14074', 'CMS', 'boss', 'askmhx', 1, null, '2021-06-16 16:01:18', 'askmhx', null, null);
+insert into navigator.t_app_inf (app_id, app_key, app_name, department, owner, status, memo, created_at, created_by, updated_at, updated_by) values ('ROCKET_GATEWAY', '7e645534a283671bac066c3c76e14074', 'GATEWAY', 'boss', 'askmhx', 1, null, '2021-06-16 16:01:18', 'askmhx', null, null);
+insert into navigator.t_app_inf (app_id, app_key, app_name, department, owner, status, memo, created_at, created_by, updated_at, updated_by) values ('ROCKET_HOMEWORK', '7e645534a283671bac066c3c76e14074', 'HOMEWORK', 'boss', 'askmhx', 1, null, '2021-06-16 16:01:18', 'askmhx', null, null);
+insert into navigator.t_app_inf (app_id, app_key, app_name, department, owner, status, memo, created_at, created_by, updated_at, updated_by) values ('ROCKET_MERCHANT', '7e645534a283671bac066c3c76e14074', 'MERCHANT', 'boss', 'askmhx', 1, null, '2021-06-16 16:01:18', 'askmhx', null, null);
+insert into navigator.t_app_inf (app_id, app_key, app_name, department, owner, status, memo, created_at, created_by, updated_at, updated_by) values ('rocket_oms', '7e645534a283671bac066c3c76e14074', 'OMS', 'boss', 'askmhx', 1, null, '2021-06-16 16:01:18', 'askmhx', null, null);
 
 
-INSERT INTO NAVIGATOR.T_APP_PROFILE (APP_ID, CLUSTER, PROFILE, NOTIFY_URL, CID, STATUS, MEMO, CREATED_AT, CREATED_BY, UPDATED_AT, UPDATED_BY) VALUES ('ROCKET_ACCOUNT', 'TST', 'TST', NULL, '20210616154023000001', 1, NULL, '2021-06-16 16:07:37', 'ASKMHX', NULL, NULL);
-INSERT INTO NAVIGATOR.T_APP_PROFILE (APP_ID, CLUSTER, PROFILE, NOTIFY_URL, CID, STATUS, MEMO, CREATED_AT, CREATED_BY, UPDATED_AT, UPDATED_BY) VALUES ('ROCKET_CHANNEL', 'TST', 'TST', NULL, '20210616154023000002', 1, NULL, '2021-06-16 16:07:37', 'ASKMHX', NULL, NULL);
-INSERT INTO NAVIGATOR.T_APP_PROFILE (APP_ID, CLUSTER, PROFILE, NOTIFY_URL, CID, STATUS, MEMO, CREATED_AT, CREATED_BY, UPDATED_AT, UPDATED_BY) VALUES ('ROCKET_CMS', 'TST', 'TST', NULL, '20210616154023000003', 1, NULL, '2021-06-16 16:07:37', 'ASKMHX', NULL, NULL);
-INSERT INTO NAVIGATOR.T_APP_PROFILE (APP_ID, CLUSTER, PROFILE, NOTIFY_URL, CID, STATUS, MEMO, CREATED_AT, CREATED_BY, UPDATED_AT, UPDATED_BY) VALUES ('ROCKET_GATEWAY', 'TST', 'TST', NULL, '20210616154023000004', 1, NULL, '2021-06-16 16:07:37', 'ASKMHX', NULL, NULL);
-INSERT INTO NAVIGATOR.T_APP_PROFILE (APP_ID, CLUSTER, PROFILE, NOTIFY_URL, CID, STATUS, MEMO, CREATED_AT, CREATED_BY, UPDATED_AT, UPDATED_BY) VALUES ('ROCKET_HOMEWORK', 'TST', 'TST', NULL, '20210616154023000005', 1, NULL, '2021-06-16 16:07:37', 'ASKMHX', NULL, NULL);
-INSERT INTO NAVIGATOR.T_APP_PROFILE (APP_ID, CLUSTER, PROFILE, NOTIFY_URL, CID, STATUS, MEMO, CREATED_AT, CREATED_BY, UPDATED_AT, UPDATED_BY) VALUES ('ROCKET_MERCHANT', 'TST', 'TST', NULL, '20210616154023000006', 1, NULL, '2021-06-16 16:07:37', 'ASKMHX', NULL, NULL);
-INSERT INTO NAVIGATOR.T_APP_PROFILE (APP_ID, CLUSTER, PROFILE, NOTIFY_URL, CID, STATUS, MEMO, CREATED_AT, CREATED_BY, UPDATED_AT, UPDATED_BY) VALUES ('ROCKET_OMS', 'TST', 'TST', NULL, '20210616154023000007', 1, NULL, '2021-06-16 16:07:37', 'ASKMHX', NULL, NULL);
+insert into navigator.t_app_profile (app_id, cluster, profile, notify_url, cid, status, memo, created_at, created_by, updated_at, updated_by) values ('ROCKET_ACCOUNT', 'TST', 'TST', null, '20210616154023000001', 1, null, '2021-06-16 16:07:37', 'askmhx', null, null);
+insert into navigator.t_app_profile (app_id, cluster, profile, notify_url, cid, status, memo, created_at, created_by, updated_at, updated_by) values ('ROCKET_CHANNEL', 'TST', 'TST', null, '20210616154023000002', 1, null, '2021-06-16 16:07:37', 'askmhx', null, null);
+insert into navigator.t_app_profile (app_id, cluster, profile, notify_url, cid, status, memo, created_at, created_by, updated_at, updated_by) values ('ROCKET_CMS', 'TST', 'TST', null, '20210616154023000003', 1, null, '2021-06-16 16:07:37', 'askmhx', null, null);
+insert into navigator.t_app_profile (app_id, cluster, profile, notify_url, cid, status, memo, created_at, created_by, updated_at, updated_by) values ('ROCKET_GATEWAY', 'TST', 'TST', null, '20210616154023000004', 1, null, '2021-06-16 16:07:37', 'askmhx', null, null);
+insert into navigator.t_app_profile (app_id, cluster, profile, notify_url, cid, status, memo, created_at, created_by, updated_at, updated_by) values ('ROCKET_HOMEWORK', 'TST', 'TST', null, '20210616154023000005', 1, null, '2021-06-16 16:07:37', 'askmhx', null, null);
+insert into navigator.t_app_profile (app_id, cluster, profile, notify_url, cid, status, memo, created_at, created_by, updated_at, updated_by) values ('ROCKET_MERCHANT', 'TST', 'TST', null, '20210616154023000006', 1, null, '2021-06-16 16:07:37', 'askmhx', null, null);
+insert into navigator.t_app_profile (app_id, cluster, profile, notify_url, cid, status, memo, created_at, created_by, updated_at, updated_by) values ('ROCKET_OMS', 'TST', 'TST', null, '20210616154023000007', 1, null, '2021-06-16 16:07:37', 'askmhx', null, null);
 
-INSERT INTO NAVIGATOR.T_APP_CONFIG (CID, CONFIG, STATUS, MEMO, CREATED_AT, CREATED_BY, UPDATED_AT, UPDATED_BY) VALUES ('20210616154023000001', '{}', 1, NULL, '2021-06-16 16:13:22', 'ASKMHX', NULL, NULL);
-INSERT INTO NAVIGATOR.T_APP_CONFIG (CID, CONFIG, STATUS, MEMO, CREATED_AT, CREATED_BY, UPDATED_AT, UPDATED_BY) VALUES ('20210616154023000001', '{}', 1, NULL, '2021-06-16 16:13:23', 'ASKMHX', NULL, NULL);
-INSERT INTO NAVIGATOR.T_APP_CONFIG (CID, CONFIG, STATUS, MEMO, CREATED_AT, CREATED_BY, UPDATED_AT, UPDATED_BY) VALUES ('20210616154023000001', '{}', 1, NULL, '2021-06-16 16:13:24', 'ASKMHX', NULL, NULL);
-INSERT INTO NAVIGATOR.T_APP_CONFIG (CID, CONFIG, STATUS, MEMO, CREATED_AT, CREATED_BY, UPDATED_AT, UPDATED_BY) VALUES ('20210616154023000002', '{}', 1, NULL, '2021-06-16 16:13:22', 'ASKMHX', NULL, NULL);
-INSERT INTO NAVIGATOR.T_APP_CONFIG (CID, CONFIG, STATUS, MEMO, CREATED_AT, CREATED_BY, UPDATED_AT, UPDATED_BY) VALUES ('20210616154023000002', '{}', 1, NULL, '2021-06-16 16:13:23', 'ASKMHX', NULL, NULL);
-INSERT INTO NAVIGATOR.T_APP_CONFIG (CID, CONFIG, STATUS, MEMO, CREATED_AT, CREATED_BY, UPDATED_AT, UPDATED_BY) VALUES ('20210616154023000002', '{}', 1, NULL, '2021-06-16 16:13:24', 'ASKMHX', NULL, NULL);
-INSERT INTO NAVIGATOR.T_APP_CONFIG (CID, CONFIG, STATUS, MEMO, CREATED_AT, CREATED_BY, UPDATED_AT, UPDATED_BY) VALUES ('20210616154023000003', '{}', 1, NULL, '2021-06-16 16:13:22', 'ASKMHX', NULL, NULL);
-INSERT INTO NAVIGATOR.T_APP_CONFIG (CID, CONFIG, STATUS, MEMO, CREATED_AT, CREATED_BY, UPDATED_AT, UPDATED_BY) VALUES ('20210616154023000003', '{}', 1, NULL, '2021-06-16 16:13:23', 'ASKMHX', NULL, NULL);
-INSERT INTO NAVIGATOR.T_APP_CONFIG (CID, CONFIG, STATUS, MEMO, CREATED_AT, CREATED_BY, UPDATED_AT, UPDATED_BY) VALUES ('20210616154023000003', '{}', 1, NULL, '2021-06-16 16:13:24', 'ASKMHX', NULL, NULL);
-INSERT INTO NAVIGATOR.T_APP_CONFIG (CID, CONFIG, STATUS, MEMO, CREATED_AT, CREATED_BY, UPDATED_AT, UPDATED_BY) VALUES ('20210616154023000004', '{
+insert into navigator.t_app_config (cid, config, status, memo, created_at, created_by, updated_at, updated_by) values ('20210616154023000001', '{}', 1, null, '2021-06-16 16:13:22', 'askmhx', null, null);
+insert into navigator.t_app_config (cid, config, status, memo, created_at, created_by, updated_at, updated_by) values ('20210616154023000001', '{}', 1, null, '2021-06-16 16:13:23', 'askmhx', null, null);
+insert into navigator.t_app_config (cid, config, status, memo, created_at, created_by, updated_at, updated_by) values ('20210616154023000001', '{}', 1, null, '2021-06-16 16:13:24', 'askmhx', null, null);
+insert into navigator.t_app_config (cid, config, status, memo, created_at, created_by, updated_at, updated_by) values ('20210616154023000002', '{}', 1, null, '2021-06-16 16:13:22', 'askmhx', null, null);
+insert into navigator.t_app_config (cid, config, status, memo, created_at, created_by, updated_at, updated_by) values ('20210616154023000002', '{}', 1, null, '2021-06-16 16:13:23', 'askmhx', null, null);
+insert into navigator.t_app_config (cid, config, status, memo, created_at, created_by, updated_at, updated_by) values ('20210616154023000002', '{}', 1, null, '2021-06-16 16:13:24', 'askmhx', null, null);
+insert into navigator.t_app_config (cid, config, status, memo, created_at, created_by, updated_at, updated_by) values ('20210616154023000003', '{}', 1, null, '2021-06-16 16:13:22', 'askmhx', null, null);
+insert into navigator.t_app_config (cid, config, status, memo, created_at, created_by, updated_at, updated_by) values ('20210616154023000003', '{}', 1, null, '2021-06-16 16:13:23', 'askmhx', null, null);
+insert into navigator.t_app_config (cid, config, status, memo, created_at, created_by, updated_at, updated_by) values ('20210616154023000003', '{}', 1, null, '2021-06-16 16:13:24', 'askmhx', null, null);
+insert into navigator.t_app_config (cid, config, status, memo, created_at, created_by, updated_at, updated_by) values ('20210616154023000004', '{
   "server": {
-    "charSet": "utf-8",
+    "charset": "utf-8",
     "addr": "127.0.0.1",
     "mode":"release",
     "port": 3306
   },
   "redis_server": {
-    "authPass": "maserati",
-    "redisAddrs": "127.0.0.1"
+    "authpass": "maserati",
+    "redisaddrs": "127.0.0.1"
   },
   "minio_server": {
-    "accessKeyID": "maserati",
+    "accesskeyid": "maserati",
     "endpoint": "127.0.0.1",
-    "useSSL": false,
-    "secretAccessKey": "RKT_TRADE"
+    "usessl": false,
+    "secretaccesskey": "rkt_trade"
   },
   "database": {
     "user": "root",
     "password": "maserati",
     "host": "127.0.0.1",
     "port": 3306,
-    "schema": "RKT_TRADE"
+    "schema": "rkt_trade"
   },
   "log": {
     "file": "logs/levante.log",
-    "rotateType": "TIME",
-    "rotateValue": "60*60*24",
-    "rotateCount": 7,
+    "rotatetype": "time",
+    "rotatevalue": "60*60*24",
+    "rotatecount": 7,
     "level": "debug"
   }
-}', 1, NULL, '2021-06-16 16:13:23', 'ASKMHX', NULL, NULL);
-INSERT INTO NAVIGATOR.T_APP_CONFIG (CID, CONFIG, STATUS, MEMO, CREATED_AT, CREATED_BY, UPDATED_AT, UPDATED_BY) VALUES ('20210616154023000004', '{}', 1, NULL, '2021-06-16 16:13:24', 'ASKMHX', NULL, NULL);
-INSERT INTO NAVIGATOR.T_APP_CONFIG (CID, CONFIG, STATUS, MEMO, CREATED_AT, CREATED_BY, UPDATED_AT, UPDATED_BY) VALUES ('20210616154023000005', '{}', 1, NULL, '2021-06-16 16:13:23', 'ASKMHX', NULL, NULL);
-INSERT INTO NAVIGATOR.T_APP_CONFIG (CID, CONFIG, STATUS, MEMO, CREATED_AT, CREATED_BY, UPDATED_AT, UPDATED_BY) VALUES ('20210616154023000005', '{}', 1, NULL, '2021-06-16 16:13:24', 'ASKMHX', NULL, NULL);
-INSERT INTO NAVIGATOR.T_APP_CONFIG (CID, CONFIG, STATUS, MEMO, CREATED_AT, CREATED_BY, UPDATED_AT, UPDATED_BY) VALUES ('20210616154023000006', '{}', 1, NULL, '2021-06-16 16:13:23', 'ASKMHX', NULL, NULL);
-INSERT INTO NAVIGATOR.T_APP_CONFIG (CID, CONFIG, STATUS, MEMO, CREATED_AT, CREATED_BY, UPDATED_AT, UPDATED_BY) VALUES ('20210616154023000006', '{}', 1, NULL, '2021-06-16 16:13:24', 'ASKMHX', NULL, NULL);
-INSERT INTO NAVIGATOR.T_APP_CONFIG (CID, CONFIG, STATUS, MEMO, CREATED_AT, CREATED_BY, UPDATED_AT, UPDATED_BY) VALUES ('20210616154023000007', '{}', 1, NULL, '2021-06-16 16:13:23', 'ASKMHX', NULL, NULL);
-INSERT INTO NAVIGATOR.T_APP_CONFIG (CID, CONFIG, STATUS, MEMO, CREATED_AT, CREATED_BY, UPDATED_AT, UPDATED_BY) VALUES ('20210616154023000007', '{}', 1, NULL, '2021-06-16 16:13:24', 'ASKMHX', NULL, NULL);
+}', 1, null, '2021-06-16 16:13:23', 'askmhx', null, null);
+insert into navigator.t_app_config (cid, config, status, memo, created_at, created_by, updated_at, updated_by) values ('20210616154023000004', '{}', 1, null, '2021-06-16 16:13:24', 'askmhx', null, null);
+insert into navigator.t_app_config (cid, config, status, memo, created_at, created_by, updated_at, updated_by) values ('20210616154023000005', '{}', 1, null, '2021-06-16 16:13:23', 'askmhx', null, null);
+insert into navigator.t_app_config (cid, config, status, memo, created_at, created_by, updated_at, updated_by) values ('20210616154023000005', '{}', 1, null, '2021-06-16 16:13:24', 'askmhx', null, null);
+insert into navigator.t_app_config (cid, config, status, memo, created_at, created_by, updated_at, updated_by) values ('20210616154023000006', '{}', 1, null, '2021-06-16 16:13:23', 'askmhx', null, null);
+insert into navigator.t_app_config (cid, config, status, memo, created_at, created_by, updated_at, updated_by) values ('20210616154023000006', '{}', 1, null, '2021-06-16 16:13:24', 'askmhx', null, null);
+insert into navigator.t_app_config (cid, config, status, memo, created_at, created_by, updated_at, updated_by) values ('20210616154023000007', '{}', 1, null, '2021-06-16 16:13:23', 'askmhx', null, null);
+insert into navigator.t_app_config (cid, config, status, memo, created_at, created_by, updated_at, updated_by) values ('20210616154023000007', '{}', 1, null, '2021-06-16 16:13:24', 'askmhx', null, null);
 
 
-USE NAVIGATOR;
-SELECT AI.APP_ID,AI.APP_KEY,AI.APP_NAME,AI.DEPARTMENT,AI.OWNER,CI.NOTIFY_URL,CI.CLUSTER, CI.PROFILE, CI.CID, CI.CONFIG, CI.CREATED_AT,CI.CREATED_BY FROM  (SELECT * FROM (SELECT MAX(CREATED_AT) AS FCREATE_AT,CID AS FCID FROM T_APP_CONFIG GROUP BY CID ) F LEFT JOIN (SELECT P.APP_ID,P.CLUSTER ,P.PROFILE,P.NOTIFY_URL,P.CID AS CID,C.CONFIG,C.CREATED_AT,C.CREATED_BY FROM T_APP_PROFILE P LEFT JOIN T_APP_CONFIG C ON P.CID = C.CID WHERE P.STATUS=1) E ON E.CID = F.FCID AND E.CREATED_AT= F.FCREATE_AT)  CI LEFT JOIN  T_APP_INF AI  ON AI.APP_ID = CI.APP_ID WHERE AI.STATUS = 1 ;
+use navigator;
+select ai.app_id,ai.app_key,ai.app_name,ai.department,ai.owner,ci.notify_url,ci.cluster, ci.profile, ci.cid, ci.config, ci.created_at,ci.created_by from  (select * from (select max(created_at) as fcreate_at,cid as fcid from t_app_config group by cid ) f left join (select p.app_id,p.cluster ,p.profile,p.notify_url,p.cid as cid,c.config,c.created_at,c.created_by from t_app_profile p left join t_app_config c on p.cid = c.cid where p.status=1) e on e.cid = f.fcid and e.created_at= f.fcreate_at)  ci left join  t_app_inf ai  on ai.app_id = ci.app_id where ai.status = 1 ;
 
 
-SELECT AI.APP_ID,AI.APP_KEY,AI.APP_NAME,AI.DEPARTMENT,AI.OWNER,CI.NOTIFY_URL,CI.CLUSTER, CI.PROFILE, CI.CID, CI.CONFIG, CI.CREATED_AT,CI.CREATED_BY FROM  (SELECT * FROM (SELECT MAX(CREATED_AT) AS FCREATE_AT,CID AS FCID FROM T_APP_CONFIG GROUP BY CID ) F LEFT JOIN (SELECT P.APP_ID,P.CLUSTER ,P.PROFILE,P.NOTIFY_URL,P.CID AS CID,C.CONFIG,C.CREATED_AT,C.CREATED_BY FROM T_APP_PROFILE P LEFT JOIN T_APP_CONFIG C ON P.CID = C.CID WHERE P.STATUS=1) E ON E.CID = F.FCID AND E.CREATED_AT= F.FCREATE_AT)  CI LEFT JOIN  T_APP_INF AI  ON AI.APP_ID = CI.APP_ID WHERE AI.STATUS = 1 AND AI.APP_ID = 'ROCKET_OMS' AND CI.CLUSTER='TST' AND CI.PROFILE='TST' ;
+select ai.app_id,ai.app_key,ai.app_name,ai.department,ai.owner,ci.notify_url,ci.cluster, ci.profile, ci.cid, ci.config, ci.created_at,ci.created_by from  (select * from (select max(created_at) as fcreate_at,cid as fcid from t_app_config group by cid ) f left join (select p.app_id,p.cluster ,p.profile,p.notify_url,p.cid as cid,c.config,c.created_at,c.created_by from t_app_profile p left join t_app_config c on p.cid = c.cid where p.status=1) e on e.cid = f.fcid and e.created_at= f.fcreate_at)  ci left join  t_app_inf ai  on ai.app_id = ci.app_id where ai.status = 1 and ai.app_id = 'rocket_oms' and ci.cluster='TST' and ci.profile='TST' ;
