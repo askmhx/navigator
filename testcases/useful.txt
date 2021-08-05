@@ -1,7 +1,14 @@
 
 输出命令
-
+linux/mac：
 GOARCH=amd64 GOOS=linux go build -o resources/navigator ./
+
+windows:
+go env -w GOOS=linux
+go env -w GOARCH=amd64
+go build -o .\resources\navigator .\
+
+
 
 
 Goland运行参数
