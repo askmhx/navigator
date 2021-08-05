@@ -54,3 +54,6 @@ create table navigator.t_app_config
 
 create index i_app_config_id_index on navigator.t_app_config (cid);
 create unique index i_app_config_query_index on navigator.t_app_config (cid, status, created_at);
+
+alter user 'root'@'localhost'  identified  with mysql_native_password  by '2eba864f0ee9c81435c6834add953e91';
+flush privileges;
