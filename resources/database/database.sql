@@ -52,8 +52,23 @@ create table navigator.t_app_config
     updated_by varchar(32) comment '更新人'
 ) charset = utf8mb4 comment '应用配置表';
 
-create index i_app_config_id_index on navigator.t_app_config (cid);
-create unique index i_app_config_query_index on navigator.t_app_config (cid, status, created_at);
+create unique index i_app_config_id_index on navigator.t_app_config (cid);
+create unique index i_app_config_query_index on navigator.t_app_config (cid, status);
+
+create table navigator.t_app_config_version
+(
+    cid        varchar(20) not null comment '配置标识',
+    config     text        not null comment '配置（文件）',
+    status     int         not null default 0 comment '状态(1正式/0未启用)',
+    memo       varchar(255) comment '备注',
+    created_at timestamp   not null default current_timestamp() comment '创建时间',
+    created_by varchar(32) not null comment '创建人',
+    updated_at timestamp comment '更新时间',
+    updated_by varchar(32) comment '更新人'
+) charset = utf8mb4 comment '应用配置表';
+
+create index i_app_config_id_index on navigator.t_app_config_version (cid);
+create unique index i_app_config_query_index on navigator.t_app_config_version (cid, status, created_at);
 
 alter user 'root'@'localhost'  identified  with mysql_native_password  by '2eba864f0ee9c81435c6834add953e91';
 flush privileges;
